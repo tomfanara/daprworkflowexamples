@@ -1,6 +1,7 @@
 # daprworkflowexamples
 for testing only and debugging
 
+The program.cs has an init console entry in a while(true) loop but it does nothing now. 
 
 dotnet run
 
