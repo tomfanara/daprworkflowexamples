@@ -34,8 +34,7 @@ namespace Alegeus.Next.Workflow.Monitor.Activities
                 "Processing reimbursements...",
                 req.RequestId);
 
-            ReimbursementResult res = new ReimbursementResult(true);
-
+            
             return res.Processed;
         }
 
