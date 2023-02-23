@@ -1,0 +1,24 @@
+version: 1
+common: # optional section for variables shared across apps
+  resourcesPath: ./app/components # any dapr resources to be shared across apps
+  env:  # any environment variable shared across apps
+    - DEBUG: true
+apps:
+  - appID: Scheduler # optional
+    appDirPath: .dapr/scheduler/ # REQUIRED
+    #resourcesPath: .dapr/resources # (optional) can be default by convention
+    #configFilePath: .dapr/config.yaml # (optional) can be default by convention too, ignore if file is not found.
+    appProtocol: GRPC
+    appPort: 3000
+    appHealthCheckPath: "/healthz" 
+    command: ["run"]
+  - appID: Monitor # optional 
+    appDirPath: .dapr/monitor/ # REQUIRED
+    appProtocol: GRPC
+    appPort: 3001
+    command: ["run"]
+  - appID: Fanout # optional 
+    appDirPath: .dapr/fanout/ # REQUIRED
+    appProtocol: GRPC
+    appPort: 3002
+    command: ["run"]
