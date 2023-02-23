@@ -1,7 +1,7 @@
 # daprworkflowexamples
 for testing only and debugging
 
-I'm running these in multi-app as follows
+I'm running these in multi-app as follows but I'm on windoes so I don't use the dapr.yml yet but run as below in terminal command prompt
 
 dotnet run
 
